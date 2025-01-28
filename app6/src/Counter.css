@@ -1,0 +1,9 @@
+button{
+    background-color: skyblue;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 8px;
+    outline: skyblue solid;
+}

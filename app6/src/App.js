@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
-  // Set the initial counter value to 0 using useState
+  // State to manage the counter value, initialized to 0
   const [counter, setCounter] = useState(0);
 
-  // Update the document title whenever the counter value changes
+  // Update the document title whenever the counter changes
   useEffect(() => {
     document.title = `Count: ${counter}`;
-  }, [counter]); // The useEffect hook will run every time the counter changes
+  }, [counter]); // This runs whenever the 'counter' value changes
 
-  // Functions to handle increment and decrement
+  // Functions to increment and decrement the counter
   const increment = () => setCounter(counter + 1);
   const decrement = () => setCounter(counter - 1);
 
