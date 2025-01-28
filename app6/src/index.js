@@ -1,16 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';  // Updated import for React 18+
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-// Render the App component to the DOM
-ReactDOM.render(
+// Get the root element in the HTML file
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render the App component inside the root element
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-
-// This can be used to log performance metrics if needed
-reportWebVitals();
