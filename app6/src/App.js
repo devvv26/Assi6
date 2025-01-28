@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
-function App() {
-  // State for counter
+const App = () => {
+  // Set the initial counter value to 0 using useState
   const [counter, setCounter] = useState(0);
 
-  // useEffect to update document title
+  // Update the document title whenever the counter value changes
   useEffect(() => {
     document.title = `Count: ${counter}`;
-  }, [counter]);
+  }, [counter]); // The useEffect hook will run every time the counter changes
 
-  // Increment and Decrement functions
+  // Functions to handle increment and decrement
   const increment = () => setCounter(counter + 1);
   const decrement = () => setCounter(counter - 1);
 
   return (
-    <div className="App">
-      <h1>React Counter</h1>
-      <p>Current count: {counter}</p>
+    <div>
+      <h1>Counter: {counter}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
     </div>
   );
-}
+};
 
 export default App;
